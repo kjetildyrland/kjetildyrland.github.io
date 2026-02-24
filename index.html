@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kjetil Dyrland — Data Engineer, ML Engineer, Software Developer.">
+  <meta property="og:title" content="Kjetil Dyrland">
+  <meta property="og:description" content="Data Engineer, ML Engineer, Software Developer.">
+  <meta property="og:type" content="website">
+  <title>Kjetil Dyrland</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<div class="page">
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+  </nav>
+
+  <header>
+    <h1>Kjetil Dyrland</h1>
+    <p>Data Engineer &middot; ML Engineer &middot; Software Developer</p>
+    <div class="header-links">
+      <a href="mailto:kjetil.dyrland@gmail.com">kjetil.dyrland@gmail.com</a>
+      <span class="sep">/</span>
+      <a href="https://github.com/kjetildyrland">GitHub</a>
+      <span class="sep">/</span>
+      <a href="https://www.linkedin.com/in/kjetil-dyrland-61817421b/">LinkedIn</a>
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <p>
+      I work across data engineering, machine learning, and software development.
+      My research background is in decision-theoretic approaches to ML classifier
+      evaluation — I've co-authored two papers on the topic. On the engineering side,
+      I build and maintain production systems ranging from scraping pipelines and
+      real-time odds engines to full-stack web applications and a native iOS app
+      currently on the App Store. Most of my work involves Python, Rust, Swift, or
+      TypeScript, backed by PostgreSQL and Supabase.
+    </p>
+  </section>
+
+  <hr>
+
+  <section id="research">
+    <h2>Research</h2>
+
+    <div class="paper">
+      <a href="https://doi.org/10.31219/osf.io/vct9y" class="paper-title">
+        Don't guess what's true: choose what's optimal. A probability transducer for machine-learning classifiers
+      </a>
+      <div class="paper-meta">Kjetil Dyrland, Alexander S. Lundervold, P.G.L. Porta Mana &middot; 2022</div>
+      <p>
+        Proposes calculating probabilities from a trained classifier's output rather
+        than from features directly, creating a one-time "transducer" that enables
+        decision-theoretic optimal choices. Demonstrated on a drug-discovery problem
+        with highly imbalanced data, where results consistently approached the
+        theoretical maximum.
+      </p>
+      <a href="https://doi.org/10.31219/osf.io/vct9y" class="doi">doi:10.31219/osf.io/vct9y</a>
+    </div>
+
+    <div class="paper">
+      <a href="https://doi.org/10.31219/osf.io/7rz8t" class="paper-title">
+        Does the evaluation stand up to evaluation? A first-principle approach to the evaluation of classifiers
+      </a>
+      <div class="paper-meta">Kjetil Dyrland, Alexander S. Lundervold, P.G.L. Porta Mana &middot; 2022</div>
+      <p>
+        Shows that popular ML evaluation metrics (F1-score, MCC, AUC) are
+        mathematically never optimal — they always produce an avoidable fraction of
+        incorrect evaluations. Makes the case for grounding classifier evaluation
+        in decision theory with problem-specific utility functions.
+      </p>
+      <a href="https://doi.org/10.31219/osf.io/7rz8t" class="doi">doi:10.31219/osf.io/7rz8t</a>
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <div class="project-head">
+        <span class="project-name">EurobonusFinder</span>
+        <span class="project-url"><a href="https://eurobonusfinder.com">eurobonusfinder.com</a></span>
+      </div>
+      <p>
+        Search tool for SAS EuroBonus award flight availability. Includes an AI
+        conversational agent for finding routes, a database of scraped availability
+        data, and configurable email alerts for when award seats open up.
+      </p>
+      <div class="tech">Next.js, Python, Supabase, Selenium</div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <span class="project-name">Tippegutta</span>
+        <span class="project-url"><a href="https://tippegutta.no">tippegutta.no</a></span>
+      </div>
+      <p>
+        Real-time value bet and arbitrage finder. Uses Pinnacle as a sharp
+        bookmaker baseline, compares odds across Norwegian and international
+        bookmakers, and surfaces positive expected value opportunities with
+        Kelly-criterion stake sizing. Covers 54+ football leagues.
+      </p>
+      <div class="tech">React, Python, Rust, Supabase</div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <span class="project-name">Mosvold App</span>
+        <span class="project-url">Mosvold & Co. AS &middot; iOS</span>
+      </div>
+      <p>
+        Native iOS property management app built for Mosvold & Co. Originally
+        React Native, I rewrote it in Swift/SwiftUI — 3x faster launch,
+        half the memory usage. Handles property information, posts, a benefits
+        platform, and user management. Live on the App Store.
+      </p>
+      <div class="tech">Swift, SwiftUI, Supabase</div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-row"><strong>Languages</strong> Python, Rust, Swift, TypeScript, SQL</div>
+    <div class="skills-row"><strong>Web</strong> React, Next.js, Tailwind, Vite</div>
+    <div class="skills-row"><strong>Backend</strong> FastAPI, Supabase, PostgreSQL, Selenium</div>
+    <div class="skills-row"><strong>Mobile</strong> SwiftUI, Xcode, TestFlight</div>
+    <div class="skills-row"><strong>ML</strong> Decision theory, Bayesian methods, classifier evaluation</div>
+    <div class="skills-row"><strong>Infra</strong> Docker, Vercel, GitHub Actions, Xcode Cloud</div>
+  </section>
+
+  <hr>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <!-- Replace these with your actual work experience -->
+
+    <div class="exp">
+      <div class="exp-date">2023 — present</div>
+      <div class="exp-head">
+        <span class="exp-role">Your Role</span>
+        <span class="exp-company">Company Name</span>
+      </div>
+      <p>Replace with a description of your role and responsibilities.</p>
+    </div>
+
+    <div class="exp">
+      <div class="exp-date">2021 — 2023</div>
+      <div class="exp-head">
+        <span class="exp-role">Previous Role</span>
+        <span class="exp-company">Previous Company</span>
+      </div>
+      <p>Replace with a description of your role and responsibilities.</p>
+    </div>
+
+    <div class="exp">
+      <div class="exp-date">2019 — 2021</div>
+      <div class="exp-head">
+        <span class="exp-role">Earlier Role</span>
+        <span class="exp-company">Earlier Company</span>
+      </div>
+      <p>Replace with a description of your role and responsibilities.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Kjetil Dyrland
+  </footer>
+
+</div>
+</body>
+</html>
